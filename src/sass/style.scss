@@ -1,1 +1,248 @@
+/* Reset*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+html:focus-within {
+    scroll-behavior: auto;
+}
+
+*,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+
+
 /* main */
+:root {
+
+    @import url('https://fonts.googleapis.com/css2?family=Foldit&family=Roboto&display=swap');
+
+    --tan-100: 34, 44%, 20%;
+    --tan-200: 34, 44%, 30%;
+    --tan-300: 34, 44%, 45%;
+    --tan-400: 34, 44%, 60%;
+    --tan-500: 34, 44%, 80%;
+    --tan-600: 34, 44%, 95%;
+
+    --gold-300: 51, 100%, 50%;
+
+    --red-decor-200: 0, 100%, 27%;
+    --red-decor-300: 0, 100%, 40%;
+    --red-decor-400: 0, 100%, 60%;
+}
+
+// font-family: 'Foldit', cursive;
+// font-family: 'Roboto', sans-serif;
+
+:where(ul, ol) {
+    list-style-position: inside;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Foldit', cursive;
+}
+
+h1::first-letter,
+h2:first-letter,
+h3:first-letter,
+h4:first-letter,
+h5:first-letter,
+h6:first-letter {
+    font-size: 22pt;
+    font-weight: bold;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-image: radial-gradient(hsl(var(--red-decor-200)), hsl(var(--gold-300)), hsl(var(--red-decor-300)));
+    margin: .1rem;
+
+    border: 1px ridge black;
+    border-radius: 3rem 0 3rem 0;
+    padding: .3rem;
+
+    color: black;
+    box-shadow: 0rem 0rem 1rem rgba(255, 0, 0, 64);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    line-height: 1.75;
+
+    padding-inline: 1.5rem;
+    margin: auto;
+
+    // background-color: hsl(var(--tan-600));
+    // background-image: linear-gradient(0.25turn, hsl(var(--tan-100)), hsl(var(--tan-400)) 15%, hsl(var(--tan-500)), hsl(var(--tan-400)) 85%, hsl(var(--tan-100));
+    background: linear-gradient(90deg, hsl(var(--tan-200))0% 1%, hsl(var(--red-decor-400)) 2% 4%, hsl(var(--tan-400))6% 94%, hsl(var(--red-decor-400))96% 98%, hsl(var(--tan-200))99% 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+body::before,
+body::after {
+    border: 1px solid black;
+
+    width: 100%;
+    height: 20px;
+    padding: 0px;
+    margin: auto;
+
+    content: "";
+}
+
+body::before {
+    border-radius: 0px 0px 100% 100%;
+    margin-bottom: 10px;
+
+    background-image: repeating-linear-gradient(135deg, hsl(var(--red-decor-400)) 20%, hsl(var(--tan-200)) 25%, hsl(var(--red-decor-400)) 20%);
+}
+
+body::after {
+    border-radius: 100% 100% 0px 0px;
+    margin-top: 10px;
+
+    background-image: repeating-linear-gradient(45deg, hsl(var(--red-decor-400)) 20%, hsl(var(--tan-200)) 25%, hsl(var(--red-decor-400)) 20%);
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    max-width: 75ch;
+    margin: auto;
+}
+
+.link-github svg {
+    max-width: 25px;
+}
+
+.skip-link {
+    border: 1px solid black;
+    position: absolute;
+    left: -1000px;
+}
+
+.skip-link:focus {
+    position: relative;
+    margin: 1rem;
+    left: 0;
+    top: 5px;
+}
+
+li {
+    list-style: '{<>} ';
+    margin-left: 2rem;
+    padding-left: 1rem;
+
+}
+
+li::marker {
+    color: hsl(var(--red-decor-300));
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 1px solid black;
+    background-color: hsl(var(--tan-100));
+    border-radius: 10%;
+
+    justify-content: left;
+
+    max-width: 100%;
+    padding: .25rem;
+}
+
+nav ul li {
+    // border-left: 1px solid black;
+    // border-right: 1px solid black;
+    height: 100%;
+    padding: 5px;
+    margin: auto;
+
+    justify-self: center;
+    text-align: center;
+
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: hsl(var(--tan-600));
+}
+
+nav ul li:hover {
+    background-color: hsl(var(--tan-300));
+}

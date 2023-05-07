@@ -1,7 +1,3 @@
-# Mobile Rules
-
-A page with minimal mobile-first styling using a reset/normalize library followed by some local CSS rules to make the page useable and accessible.
-
 ## Rules For Minimum Functionality
 
 1. The page must view well starting at 320px viewport width and above (with **no media queries** affecting layout or font sizes). Note: The iphone 5/SE in Chrome dev tools is 320px wide in profile mode.
