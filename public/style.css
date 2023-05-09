@@ -87,7 +87,7 @@ html:focus-within {
   --red-decor-400: 0, 100%, 60%;
 }
 
-:where(ul, ol) {
+:where(ul, ol, li) {
   list-style-position: inside;
 }
 
@@ -109,7 +109,7 @@ h6:first-letter {
   font-size: 22pt;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
-  background-image: radial-gradient(hsl(var(--red-decor-200)), hsl(var(--gold-300)), hsl(var(--red-decor-300)));
+  background-image: radial-gradient(hsl(var(--gold-300)) 40%, hsl(var(--red-decor-300)));
   margin: 0.1rem;
   border: 1px ridge black;
   border-radius: 3rem 0 3rem 0;
@@ -124,7 +124,7 @@ body {
   line-height: 1.75;
   padding-inline: 1.5rem;
   margin: auto;
-  background: linear-gradient(90deg, hsl(var(--tan-200)) 0% 1%, hsl(var(--red-decor-400)) 2% 4%, hsl(var(--tan-400)) 6% 94%, hsl(var(--red-decor-400)) 96% 98%, hsl(var(--tan-200)) 99% 100%);
+  background: linear-gradient(90deg, hsl(var(--tan-200)) 0% 1%, hsl(var(--red-decor-400)) 2% 4%, hsl(var(--tan-400)) 6% 25%, hsl(var(--tan-500)) 45% 55%, hsl(var(--tan-400)) 65% 94%, hsl(var(--red-decor-400)) 96% 98%, hsl(var(--tan-200)) 99% 100%);
   font-family: "Roboto", sans-serif;
 }
 
@@ -133,7 +133,7 @@ body::after {
   border: 1px solid black;
   width: 100%;
   height: 20px;
-  padding: 0px;
+  padding: 10px;
   margin: auto;
   content: "";
 }
@@ -171,15 +171,21 @@ footer {
 
 .skip-link:focus {
   position: relative;
-  margin: 1rem;
+  margin: auto;
   left: 0;
   top: 5px;
+  text-align: center;
+  font-size: 14pt;
+  width: 100%;
 }
 
 li {
   list-style: "{<>} ";
   margin-left: 2rem;
   padding-left: 1rem;
+  background-color: rgba(153, 102, 102, 0.125);
+  border-radius: 2px;
+  list-style-position: inside;
 }
 
 li::marker {
